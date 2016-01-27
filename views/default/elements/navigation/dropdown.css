@@ -1,0 +1,10 @@
+.elgg-menu-item-has-dropdown > .elgg-child-menu {
+	display: none;
+	max-height: 500px;
+    overflow-y: auto;
+	position: fixed;
+}
+
+ .elgg-menu-item-has-dropdown > .elgg-child-menu:only-of-type > li {
+    border-bottom: none;
+}

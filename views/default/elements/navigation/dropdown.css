@@ -5,6 +5,13 @@
 	position: fixed;
 }
 
- .elgg-menu-item-has-dropdown > .elgg-child-menu > li:only-of-type > li {
+.elgg-menu-item-has-dropdown > .elgg-child-menu li {
+    border-bottom: none;
+}
+
+.elgg-menu-item-has-dropdown > .elgg-child-menu li ul {
+    border-bottom: 1px solid #DCDCDC;
+}
+.elgg-menu-item-has-dropdown > .elgg-child-menu li ul:last-of-type {
     border-bottom: none;
 }

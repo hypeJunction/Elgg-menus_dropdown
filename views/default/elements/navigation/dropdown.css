@@ -5,6 +5,6 @@
 	position: fixed;
 }
 
- .elgg-menu-item-has-dropdown > .elgg-child-menu:only-of-type > li {
+ .elgg-menu-item-has-dropdown > .elgg-child-menu > li:only-of-type > li {
     border-bottom: none;
 }

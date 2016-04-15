@@ -7,7 +7,7 @@ require(['jquery', 'elgg/popup', 'jquery-ui'], function ($, popup) {
 			var position = $trigger.data('position') || {};
 			position.at = position.at || $trigger.data('at');
 			position.my = position.my || $trigger.data('my');
-			position.collision = position.collision || $trigger('collision');
+			position.collision = position.collision || $trigger.data('collision');
 			position.of = $target.parent();
 			popup.open($trigger, $target, position);
 			return false;

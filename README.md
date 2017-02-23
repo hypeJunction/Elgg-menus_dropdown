@@ -18,8 +18,14 @@ elgg_register_menu_item('entity', array(
 	'href' => '#',
 	'text' => 'Parent item',
 	'item_class' => 'elgg-menu-item-has-dropdown',
-	'data-my' => 'right top',
-	'data-at' => 'right bottom+5px',
+	// controls the position relative to the trigger
+	'data-position' => json_encode([
+		'my' => 'right top',
+		'at' => 'right bottom+5px',
+	]),
+	// popup appear in a fixed position and detached from the original DOM position
+    // you can add an additional class to have more control over styling
+	'data-popup-class' => 'elgg-menu-entity-popup',
 	'data-collision' => 'fit fit',
 ));
 elgg_register_menu_item('entity', array(

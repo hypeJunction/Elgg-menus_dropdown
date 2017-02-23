@@ -15,12 +15,7 @@
 
 	<requires>
 		<type>elgg_release</type>
-		<version>2.0</version>
-	</requires>
-
-	<requires>
-		<type>plugin</type>
-		<name>ui_popup</name>
+		<version>2.3</version>
 	</requires>
 
 </plugin_manifest>

@@ -2,9 +2,12 @@
 
 namespace HypeJunction\MenusDropdown;
 
-use Elgg\UnitTestCase;
+use Elgg\IntegrationTestCase;
 
-class MenusDropdownTest extends UnitTestCase {
+class MenusDropdownTest extends IntegrationTestCase {
+
+    public function up() {}
+    public function down() {}
 
     public function testPluginLoads(): void {
         $plugin = elgg_get_plugin_from_id('menus_dropdown');

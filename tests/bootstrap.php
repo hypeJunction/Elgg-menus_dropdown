@@ -1,16 +1,27 @@
 <?php
-
 /**
- * Test bootstrap for menus_dropdown plugin.
- *
- * Requires Elgg's autoloader to be available via Composer.
+ * PHPUnit bootstrap for Elgg plugin tests.
+ * Plugin must be installed at {elgg_root}/mod/{plugin_id}/
  */
 
-$autoloader = dirname(__DIR__) . '/vendor/autoload.php';
-if (!file_exists($autoloader)) {
-    $autoloader = dirname(__DIR__, 4) . '/vendor/autoload.php';
+// tests/ -> mod/plugin/ -> mod/ -> elgg_root/
+$elggRoot = dirname(dirname(dirname(__DIR__)));
+
+require_once $elggRoot . '/vendor/autoload.php';
+
+// Load Elgg test classes (UnitTestCase, IntegrationTestCase, etc.)
+$testClassesDir = $elggRoot . '/vendor/elgg/elgg/engine/tests/classes';
+spl_autoload_register(function ($class) use ($testClassesDir) {
+    $file = $testClassesDir . '/' . str_replace('\\', '/', $class) . '.php';
+    if (file_exists($file)) require_once $file;
+});
+
+// Load plugin autoloader if present
+$pluginRoot = dirname(__DIR__);
+if (file_exists($pluginRoot . '/vendor/autoload.php')) {
+    require_once $pluginRoot . '/vendor/autoload.php';
+} elseif (file_exists($pluginRoot . '/autoloader.php')) {
+    require_once $pluginRoot . '/autoloader.php';
 }
 
-if (file_exists($autoloader)) {
-    require_once $autoloader;
-}
+\Elgg\Application::loadCore();

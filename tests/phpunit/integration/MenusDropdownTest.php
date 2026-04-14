@@ -9,6 +9,10 @@ class MenusDropdownTest extends IntegrationTestCase {
     public function up() {}
     public function down() {}
 
+    public function getPluginID(): string {
+        return 'menus_dropdown';
+    }
+
     public function testPluginLoads(): void {
         $plugin = elgg_get_plugin_from_id('menus_dropdown');
         $this->assertNotNull($plugin, 'Plugin menus_dropdown should be loadable');

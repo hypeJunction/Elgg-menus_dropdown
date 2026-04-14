@@ -1,6 +1,15 @@
 <?php
 
 return [
+	'plugin' => [
+		'id' => 'menus_dropdown',
+		'name' => 'Dropdown Menus',
+		'version' => '2.1.0',
+		'description' => 'Dropdown navigation menus for Elgg.',
+		'author' => 'Ismayil Khayredinov',
+		'category' => 'ui',
+	],
+
 	'view_extensions' => [
 		'elements/navigation.css' => [
 			'elements/navigation/dropdown.css' => [],

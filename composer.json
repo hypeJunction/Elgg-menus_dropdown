@@ -5,7 +5,11 @@
 	"description": "Dropdown Menu for Elgg",
 	"homepage": "http://hypejunction.com",
 	"keywords": [
-		"elgg", "plugin", "ui", "menus", "dropdown"
+		"elgg",
+		"plugin",
+		"ui",
+		"menus",
+		"dropdown"
 	],
 	"license": "GPL-2.0",
 	"authors": [
@@ -22,6 +26,11 @@
 	"config": {
 		"allow-plugins": {
 			"composer/installers": true
+		}
+	},
+	"extra": {
+		"elgg-plugin": {
+			"id": "menus_dropdown"
 		}
 	}
 }

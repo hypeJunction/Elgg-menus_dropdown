@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 30_000,
   retries: 0,
   use: {
-    baseURL: process.env.ELGG_URL || 'http://localhost:8080',
+    baseURL: process.env.ELGG_BASE_URL || `http://localhost:${process.env.ELGG_PORT || 8480}`,
     headless: true,
     screenshot: 'only-on-failure',
   },

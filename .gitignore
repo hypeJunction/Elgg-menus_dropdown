@@ -10,4 +10,9 @@ robots.txt
 /releases/
 /vendor/
 composer.lock
-Gemfile.lockdocker/.env
+Gemfile.lock
+docker/.env
+**/node_modules/
+**/package-lock.json
+**/test-results/
+tests/.phpunit.result.cache

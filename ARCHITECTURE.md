@@ -1,4 +1,4 @@
-# menus_dropdown — Architecture (Elgg 4.x)
+# menus_dropdown — Architecture (Elgg 5.x)
 
 ## Summary
 
@@ -44,3 +44,19 @@ None — leaf plugin. Extends Elgg core navigation views.
   (avoids `c_i_` prefix mismatch from `BaseTestCase::getTestingConfig()`).
 - System cache must be cleared after plugin activation for PHPUnit to find
   views on first run (cache pre-dates activation).
+
+## Migration Notes (4.x → 5.x)
+
+- `composer.json`: `elgg/elgg` bumped to `^5.0`; `php` bumped to `>=8.1`.
+- `dropdown.js`: removed explicit `jquery-ui` from AMD `require()` array —
+  Elgg 5.x split `jquery-ui` into individual modules (`jquery-ui/position`,
+  `jquery-ui/unique-id`). `elgg/popup` already depends on these; the plugin
+  does not need to declare `jquery-ui` separately.
+- Docker stack upgraded: PHP 8.1-apache, MySQL 8.0, Elgg ~5.1.0.
+- `docker/.env` `ELGG_SITE_URL` changed from `http://localhost:PORT/` to
+  `http://elgg/` (internal Docker service name required for 5.x HOST check).
+- `ELGG_DB_PREFIX=elgg_` added to service environment for PHPUnit (prevents
+  `c_i_elgg_` prefix mismatch in `BaseTestCase::getTestingConfig()`).
+- Playwright tests rewritten to inject synthetic `.elgg-menu-item-has-dropdown`
+  items — the plugin provides behavior for menus configured elsewhere; a fresh
+  install has no dropdown items by default.

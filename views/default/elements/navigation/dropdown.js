@@ -1,4 +1,4 @@
-require(['jquery', 'elgg/popup', 'jquery-ui'], function ($, popup) {
+require(['jquery', 'elgg/popup'], function ($, popup) {
 
 	$(document).on('click', '.elgg-menu-item-has-dropdown > a', function (e) {
 		var $trigger = $(this);

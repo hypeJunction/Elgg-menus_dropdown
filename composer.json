@@ -1,6 +1,5 @@
 {
 	"name": "hypejunction/menus_dropdown",
-	"version": "2.2.0",
 	"type": "elgg-plugin",
 	"description": "Dropdown Menu for Elgg",
 	"homepage": "http://hypejunction.com",
@@ -11,7 +10,7 @@
 		"menus",
 		"dropdown"
 	],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 			"name": "Ismayil Khayredinov",

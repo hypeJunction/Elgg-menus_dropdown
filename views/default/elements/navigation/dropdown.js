@@ -14,6 +14,7 @@ require(['jquery', 'elgg/popup'], function ($, popup) {
 			if ($trigger.data('popupClass')) {
 				$target.addClass($trigger.data('popupClass'));
 			}
+
 			var position = $trigger.data('position') || {};
 			position.at = position.at || $trigger.data('at') || 'center bottom';
 			position.my = position.my || $trigger.data('my') || 'center top';

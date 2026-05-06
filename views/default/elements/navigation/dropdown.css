@@ -1,17 +1,17 @@
 .elgg-menu-item-has-dropdown > .elgg-child-menu {
 	display: none;
 	max-height: 500px;
-    overflow-y: auto;
+	overflow-y: auto;
 	position: fixed;
 }
 
 .elgg-menu-item-has-dropdown > .elgg-child-menu li {
-    border-bottom: none;
+	border-bottom: none;
 }
 
 .elgg-menu-item-has-dropdown > .elgg-child-menu li ul {
-    border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid #DCDCDC;
 }
 .elgg-menu-item-has-dropdown > .elgg-child-menu li ul:last-of-type {
-    border-bottom: none;
+	border-bottom: none;
 }

@@ -59,6 +59,10 @@ None — leaf plugin. Extends Elgg core navigation views.
 - Docker test stack added for Elgg 6.x (docker/elgg6/).
 - No data migration needed.
 
+## Seeding
+
+No seeder required. This plugin owns no entity types, subtypes, or persistent relationship schemas — it is a pure UI/utility/admin plugin with no persisted entity surface of its own.
+
 ## Migration Notes (4.x → 5.x)
 
 - `composer.json`: `elgg/elgg` bumped to `^5.0`; `php` bumped to `>=8.1`.

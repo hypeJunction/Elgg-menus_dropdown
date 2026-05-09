@@ -1,4 +1,4 @@
-# menus_dropdown — Architecture (Elgg 5.x)
+# menus_dropdown — Architecture (Elgg 6.x)
 
 ## Summary
 
@@ -44,6 +44,13 @@ None — leaf plugin. Extends Elgg core navigation views.
   (avoids `c_i_` prefix mismatch from `BaseTestCase::getTestingConfig()`).
 - System cache must be cleared after plugin activation for PHPUnit to find
   views on first run (cache pre-dates activation).
+
+## Migration Notes (5.x → 6.x)
+
+- `elgg/elgg ~6.1.0`, `php >=8.1`, `ext-intl` added in `composer.json`.
+- `dropdown.js` converted from AMD (`require(['jquery', 'elgg/popup'], function($, popup){...})`) to ES module (`import $ from 'jquery'; import popup from 'elgg/popup';`).
+- Docker test stack added for Elgg 6.x (docker/elgg6/).
+- No data migration needed.
 
 ## Migration Notes (4.x → 5.x)
 

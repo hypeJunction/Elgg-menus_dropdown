@@ -4,7 +4,7 @@ return [
 	'plugin' => [
 		'id' => 'menus_dropdown',
 		'name' => 'Dropdown Menus',
-		'version' => '2.2.0',
+		'version' => '6.0.0',
 		'description' => 'Dropdown navigation menus for Elgg.',
 		'author' => 'Ismayil Khayredinov',
 		'category' => 'ui',

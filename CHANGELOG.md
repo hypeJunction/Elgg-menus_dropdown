@@ -1,3 +1,13 @@
+<a name="6.0.0"></a>
+## 6.0.0 (2026-05-09)
+
+### Elgg 6.x migration
+
+* `composer.json` bumped to `elgg/elgg ~6.1.0`, `php >=8.1`, added `ext-intl`.
+* `dropdown.js` converted from AMD (`require([...], function(){...})`) to ES module (`import $ from 'jquery'; import popup from 'elgg/popup';`).
+* Docker test stack added for Elgg 6.x (docker/elgg6/).
+* No data migration required.
+
 <a name="3.0.0"></a>
 ## 3.0.0 (2026-04-20)
 

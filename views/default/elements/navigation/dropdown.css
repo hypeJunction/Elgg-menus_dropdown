@@ -1,6 +1,11 @@
+:root {
+	--dropdown-menu-max-height: 500px;
+	--dropdown-border-color: #DCDCDC;
+}
+
 .elgg-menu-item-has-dropdown > .elgg-child-menu {
 	display: none;
-	max-height: 500px;
+	max-height: var(--dropdown-menu-max-height);
 	overflow-y: auto;
 	position: fixed;
 }
@@ -10,7 +15,7 @@
 }
 
 .elgg-menu-item-has-dropdown > .elgg-child-menu li ul {
-	border-bottom: 1px solid #DCDCDC;
+	border-bottom: 1px solid var(--dropdown-border-color);
 }
 .elgg-menu-item-has-dropdown > .elgg-child-menu li ul:last-of-type {
 	border-bottom: none;

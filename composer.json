@@ -1,13 +1,15 @@
 {
 	"name": "hypejunction/menus_dropdown",
-	"version": "2.0.0",
 	"type": "elgg-plugin",
-	"description": "Dropdown Menu for Elgg",
-	"homepage": "http://hypejunction.com",
+	"description": "Dropdown navigation menus for Elgg",
 	"keywords": [
-		"elgg", "plugin", "ui", "menus", "dropdown"
+		"elgg",
+		"plugin",
+		"ui",
+		"menus",
+		"dropdown"
 	],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 			"name": "Ismayil Khayredinov",
@@ -15,8 +17,19 @@
 		}
 	],
 	"require": {
-		"php": ">=5.5",
-		"composer/installers": "1.*"
+		"php": ">=8.3",
+		"ext-intl": "*",
+		"elgg/elgg": "~7.0.0",
+		"composer/installers": "^2.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"extra": {
+		"elgg-plugin": {
+			"id": "menus_dropdown"
+		}
 	}
 }
-

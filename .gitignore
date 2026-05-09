@@ -11,3 +11,8 @@ robots.txt
 /vendor/
 composer.lock
 Gemfile.lock
+docker/.env
+**/node_modules/
+**/package-lock.json
+**/test-results/
+tests/.phpunit.result.cache

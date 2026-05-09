@@ -1,4 +1,4 @@
-# menus_dropdown — Architecture (Elgg 6.x)
+# menus_dropdown — Architecture (Elgg 7.x)
 
 ## Summary
 
@@ -44,6 +44,13 @@ None — leaf plugin. Extends Elgg core navigation views.
   (avoids `c_i_` prefix mismatch from `BaseTestCase::getTestingConfig()`).
 - System cache must be cleared after plugin activation for PHPUnit to find
   views on first run (cache pre-dates activation).
+
+## Migration Notes (6.x → 7.x)
+
+- `elgg/elgg ~7.0.0`, `php >=8.3` in `composer.json`.
+- Docker test stack added for Elgg 7.x (docker/elgg7/) with PHP 8.3.
+- No breaking changes: no CSS Crush syntax, no direct `ElggObject` instantiation, no removed Elgg APIs.
+- No data migration needed.
 
 ## Migration Notes (5.x → 6.x)
 

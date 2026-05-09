@@ -1,3 +1,12 @@
+<a name="7.0.0"></a>
+## 7.0.0 (2026-05-09)
+
+### Elgg 7.x migration
+
+* `composer.json` bumped to `elgg/elgg ~7.0.0`, `php >=8.3`.
+* Docker test stack added for Elgg 7.x (docker/elgg7/).
+* No PHP or CSS breaking changes. No data migration required.
+
 <a name="6.0.0"></a>
 ## 6.0.0 (2026-05-09)
 

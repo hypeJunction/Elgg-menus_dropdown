@@ -1,4 +1,6 @@
 Dropdown Menus for Elgg
+
+![Elgg 3.x](https://img.shields.io/badge/Elgg-3.x-orange.svg?style=flat-square)
 =======================
 ![Elgg 2.3](https://img.shields.io/badge/Elgg-2.3-orange.svg?style=flat-square)
 

@@ -1,36 +1,36 @@
 {
-	"name": "hypejunction/menus_dropdown",
-	"version": "2.0.0",
-	"type": "elgg-plugin",
-	"description": "Dropdown Menu for Elgg",
-	"homepage": "http://hypejunction.com",
-	"keywords": [
-		"elgg",
-		"plugin",
-		"ui",
-		"menus",
-		"dropdown"
-	],
-	"license": "GPL-2.0",
-	"authors": [
-		{
-			"name": "Ismayil Khayredinov",
-			"email": "info@hypejunction.com"
-		}
-	],
-	"require": {
-		"php": ">=7.4",
-		"elgg/elgg": "^4.0",
-		"composer/installers": "^2.0"
-	},
-	"config": {
-		"allow-plugins": {
-			"composer/installers": true
-		}
-	},
-	"extra": {
-		"elgg-plugin": {
-			"id": "menus_dropdown"
-		}
-	}
+    "name": "hypejunction/menus_dropdown",
+    "version": "4.0.0",
+    "type": "elgg-plugin",
+    "description": "Dropdown Menu for Elgg",
+    "homepage": "http://hypejunction.com",
+    "keywords": [
+        "elgg",
+        "plugin",
+        "ui",
+        "menus",
+        "dropdown"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Ismayil Khayredinov",
+            "email": "info@hypejunction.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "elgg/elgg": "^4.0",
+        "composer/installers": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "elgg-plugin": {
+            "id": "menus_dropdown"
+        }
+    }
 }

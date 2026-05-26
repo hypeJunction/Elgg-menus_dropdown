@@ -14,38 +14,38 @@ class MenusDropdownTest extends IntegrationTestCase {
 	}
 
 	public function testPluginLoads(): void {
-		$plugin = elgg_get_plugin_from_id('menus_dropdown');
+		$plugin = \elgg_get_plugin_from_id('menus_dropdown');
 		$this->assertNotNull($plugin, 'Plugin menus_dropdown should be loadable');
 	}
 
 	public function testPluginIsEnabled(): void {
-		$plugin = elgg_get_plugin_from_id('menus_dropdown');
+		$plugin = \elgg_get_plugin_from_id('menus_dropdown');
 		$this->assertNotNull($plugin);
 		$this->assertTrue($plugin->isEnabled(), 'Plugin menus_dropdown should be enabled');
 	}
 
 	public function testPluginIsActive(): void {
-		$plugin = elgg_get_plugin_from_id('menus_dropdown');
+		$plugin = \elgg_get_plugin_from_id('menus_dropdown');
 		$this->assertNotNull($plugin);
 		$this->assertTrue($plugin->isActive(), 'Plugin menus_dropdown should be active');
 	}
 
 	public function testDropdownCssViewExists(): void {
 		$this->assertTrue(
-			elgg_view_exists('elements/navigation/dropdown.css'),
+			\elgg_view_exists('elements/navigation/dropdown.css'),
 			'CSS view elements/navigation/dropdown.css should exist'
 		);
 	}
 
 	public function testDropdownJsViewExists(): void {
 		$this->assertTrue(
-			elgg_view_exists('elements/navigation/dropdown.js'),
+			\elgg_view_exists('elements/navigation/dropdown.js'),
 			'JS view elements/navigation/dropdown.js should exist'
 		);
 	}
 
 	public function testNavigationCssExtendsDropdownCss(): void {
-		$viewList = array_values(_elgg_services()->views->getViewList('elements/navigation.css'));
+		$viewList = array_values(\_elgg_services()->views->getViewList('elements/navigation.css'));
 		$this->assertContains(
 			'elements/navigation/dropdown.css',
 			$viewList,
@@ -54,7 +54,7 @@ class MenusDropdownTest extends IntegrationTestCase {
 	}
 
 	public function testAdminCssExtendsDropdownCss(): void {
-		$viewList = array_values(_elgg_services()->views->getViewList('admin.css'));
+		$viewList = array_values(\_elgg_services()->views->getViewList('admin.css'));
 		$this->assertContains(
 			'elements/navigation/dropdown.css',
 			$viewList,
@@ -63,7 +63,7 @@ class MenusDropdownTest extends IntegrationTestCase {
 	}
 
 	public function testElggJsExtendsDropdownJs(): void {
-		$viewList = array_values(_elgg_services()->views->getViewList('elgg.js'));
+		$viewList = array_values(\_elgg_services()->views->getViewList('elgg.js'));
 		$this->assertContains(
 			'elements/navigation/dropdown.js',
 			$viewList,

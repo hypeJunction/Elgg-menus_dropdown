@@ -13,6 +13,6 @@ class Bootstrap extends DefaultPluginBootstrap {
 	 * {@inheritdoc}
 	 */
 	public function init() {
-		elgg_import_esm('elements/navigation/dropdown');
+		\elgg_import_esm('elements/navigation/dropdown');
 	}
 }

@@ -37,10 +37,10 @@ class MenusDropdownTest extends IntegrationTestCase {
 		);
 	}
 
-	public function testDropdownJsViewExists(): void {
+	public function testDropdownEsmModuleExists(): void {
 		$this->assertTrue(
-			elgg_view_exists('elements/navigation/dropdown.js'),
-			'JS view elements/navigation/dropdown.js should exist'
+			elgg_view_exists('elements/navigation/dropdown.mjs'),
+			'ESM module view elements/navigation/dropdown.mjs should exist'
 		);
 	}
 
@@ -62,12 +62,13 @@ class MenusDropdownTest extends IntegrationTestCase {
 		);
 	}
 
-	public function testElggJsExtendsDropdownJs(): void {
-		$viewList = array_values(_elgg_services()->views->getViewList('elgg.js'));
-		$this->assertContains(
-			'elements/navigation/dropdown.js',
-			$viewList,
-			'elgg.js should be extended with dropdown.js'
+	public function testDropdownEsmModuleResolves(): void {
+		// The module is loaded via elgg_import_esm('elements/navigation/dropdown')
+		// in the plugin bootstrap; Elgg resolves the extensionless name to the
+		// elements/navigation/dropdown.mjs view in the importmap.
+		$this->assertNotEmpty(
+			elgg_view('elements/navigation/dropdown.mjs'),
+			'ESM module elements/navigation/dropdown.mjs should render non-empty source'
 		);
 	}
 }
